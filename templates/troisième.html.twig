@@ -1,0 +1,23 @@
+{# Tous les blocks s'affichent dans le parent lorsqu'on appelle cet enfant avec include #}
+{% block test %}
+    Je suis troisième, l'enfant d'index
+    <br>
+{% endblock %}
+
+
+{% block caca %}
+    Je suis le deuxième block d'affichage de troisieme
+{% endblock %}
+
+
+{% block colors %}
+    {% set colors = ["bleu","rouge","vert","cobalt"] %}
+    <h3>Colors:</h3>
+    {% for color in colors %}
+    <ul>
+        <li> {{color}} </li>
+    </ul>
+    {% endfor %}
+
+    <button>Clic sur mé</button>
+{% endblock %}

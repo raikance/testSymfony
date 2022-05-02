@@ -1,0 +1,21 @@
+{# Si on met include un template, on ne peut pas overrider, tous les blocks s'ahoutent à la suite #}
+{# Si on met extends, ça affiche le template de base, qu'on peut overrider sous conditions d'appeler block nomBaliseARemplacer
+    on peut rajouter un parent, par contre les enfants de ce template n'apparait pas contrairement à include sans appeler parent() #}
+{# Ne pas mettre de balises hors de la base #}
+{# On ne peux pas utiliser extends dans un block #}
+
+{% include "base.html.twig" %}
+
+
+{% block body %}
+{#  {{ parent() }} {# On ajoute le parent, avec extends, on écrase bas.html.twig mais en l'appelant ça s'ajoute où on le place #}
+    Je suis index, l'enfant de base et le parent de troisieme
+    <br>
+    <br>
+{% endblock %}
+
+{% block test %}
+    {% include "troisième.html.twig" %}
+{% endblock %}
+
+
