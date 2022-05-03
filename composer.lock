@@ -3433,8 +3433,6 @@
         "ext-ctype": "*",
         "ext-iconv": "*"
     },
-    "platform-dev": {
-        "php": "*"
-    },
-    "plugin-api-version": "2.0.0"
+    "platform-dev": [],
+    "plugin-api-version": "2.2.0"
 }
