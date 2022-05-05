@@ -2,7 +2,7 @@
 
 namespace App\Entity;
 
-use App\Repository\TaMereRepository;
+
 use Doctrine\ORM\Mapping as ORM;
 /**
  * @ORM\Entity(repositoryClass=TaMereRepository::class)
@@ -23,14 +23,30 @@ class TaMere
     private string $nom;
 
     /**
-     * @ORM\Column(type="text", nullable=true)
+     * @ORM\Column(type="text")
      */
-    private string $description;
+    private ?string $description;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
     private string $couleur;
+
+    /**
+     * @return string
+     */
+    public function getCouleur(): string
+    {
+        return $this->couleur;
+    }
+
+    /**
+     * @param string $couleur
+     */
+    public function setCouleur(string $couleur): void
+    {
+        $this->couleur = $couleur;
+    }
 
     /**
      * @return int
@@ -80,20 +96,6 @@ class TaMere
         $this->description = $description;
     }
 
-    /**
-     * @return string
-     */
-    public function getCouleur(): string
-    {
-        return $this->couleur;
-    }
 
-    /**
-     * @param string $couleur
-     */
-    public function setCouleur(string $couleur): void
-    {
-        $this->couleur = $couleur;
-    }
 
 }
