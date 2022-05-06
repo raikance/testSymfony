@@ -2,7 +2,7 @@
 
 namespace App\DataFixtures;
 
-use App\Entity\TaMere;
+use App\Entity\Tamere;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager; /** ObjectManager permet d'insérer dans la bases de données, qui nous permettra de faire des tests unitaires */
 

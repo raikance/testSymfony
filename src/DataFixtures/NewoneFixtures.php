@@ -15,7 +15,7 @@ class NewoneFixtures extends Fixture
         for ($i = 0; $i < 20; $i++) {
             $new = new Newone();
             $new->setNom('coucou');
-            $new->setDate();
+            //$new->setDate();
             $manager->persist($new);
         }
         /** On aurait mis un flush si en dessous on comptait utiliser la même variable */

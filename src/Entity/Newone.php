@@ -27,6 +27,11 @@ class Newone
      */
     private $date;
 
+    /** Voir ça 1 */
+    public function __construct(){
+        $this->Now();
+    }
+
     public function getId(): ?int
     {
         return $this->id;
@@ -49,10 +54,15 @@ class Newone
         return $this->date;
     }
 
-    public function setDate(): self
+    public function setDate($date): self
     {
-        $this->date = new \DateTime('now');
+        $this->date = $date;
 
         return $this;
+    }
+
+    /** Voir ça 1 */
+    private function Now(){ /** Objet anonyme mieux que de faire directement une public function */
+        $this->setDate(new \DateTime("now"));
     }
 }
